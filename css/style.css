@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #20202d;
+    margin: 0;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    max-width: 945px;
+    margin: auto;
+}
+
+.hero {
+    padding-top: 50px;
+    padding-bottom: 155px;
+    background: linear-gradient(0.00deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 100%);
+}
+
+.hero-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 105px;
+}
+
+.social-link {
+    margin-left: 20px;
+}
+
+/* я не смог найти подходящего размера SVG для иконки ТГ поэтому:   */
+.social-link img {
+    width: 24px;
+    height: 24px;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-subtitle {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFBB01;
+    margin-bottom: 14px;
+}
+
+.hero-title {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 100%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    max-width: 420px;
+    margin-bottom: 38px;
+}
+
+.button {
+    border-radius: 5px 5px 10px 10px;
+    box-shadow: 0px 4px 0px 0px rgba(182, 133, 0, 1);
+    background: linear-gradient(180.00deg, rgba(252.875, 221.8746795654297, 118.2717514038086, 1), rgba(255, 187, 1, 1) 100%);
+    padding: 24px 42px;
+    border: none;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.hero-avatar {
+    width: 389px;
+    height: 389px;
+    background-color: #fff;
+    border-radius: 50%;
+    background-image: url("../img/avatar.jpg");
+    background-repeat: no-repeat;
+    background-position: center top -10px;
+    border: 13px solid #fff;
+    background-size: contain;
+}
