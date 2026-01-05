@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
+import AnimatedIcon from './AnimatedIcon';
 
 const icons = [
   "/mysite/img/features/offer-img.svg",
@@ -52,15 +53,15 @@ export default function Features() {
         >
           {t.features.items.map((feature, idx) => (
             <motion.div key={idx} variants={itemVariants} className="glass-card flex flex-col">
-              <div className="mb-[22px]">
+              <AnimatedIcon delay={idx * 0.5} className="mb-[22px] w-fit">
                 <Image 
                   src={icons[idx]} 
                   alt={feature.title} 
                   width={48} 
                   height={48} 
-                  className="h-12 w-12 icon-neon-hover"
+                  className="h-12 w-12 animate-neon-pulse"
                 />
-              </div>
+              </AnimatedIcon>
               <h3 className="mb-4 text-2xl font-bold leading-7">
                 {feature.title}
               </h3>

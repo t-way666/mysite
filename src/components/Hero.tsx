@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
 import { ThemeToggle } from './ThemeToggle';
 import { LanguageToggle } from './LanguageToggle';
+import AnimatedIcon from './AnimatedIcon';
 
 const socialLinks = [
   { href: "https://github.com/t-way666", src: "/mysite/img/socials/github.svg", alt: "GitHub" },
@@ -23,7 +24,9 @@ export default function Hero() {
           <div className="hidden items-center gap-5 md:flex">
             {socialLinks.map((link, idx) => (
               <a key={idx} href={link.href} className="transition-opacity hover:opacity-100" target="_blank" rel="noopener noreferrer">
-                <Image src={link.src} alt={link.alt} width={17} height={16} className="h-4 w-[17px] dark:invert-0 invert icon-neon-hover" />
+                <AnimatedIcon delay={idx * 0.3}>
+                  <Image src={link.src} alt={link.alt} width={17} height={16} className="h-4 w-[17px] dark:invert-0 invert animate-neon-pulse" />
+                </AnimatedIcon>
               </a>
             ))}
           </div>

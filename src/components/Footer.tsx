@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
+import AnimatedIcon from './AnimatedIcon';
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -30,7 +31,9 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="btn-primary flex w-full items-center justify-center gap-3 !px-0 sm:w-[280px]"
             >
-              <Image src="/mysite/img/socials/telegram.svg" alt="TG" width={20} height={20} className="invert-0" />
+              <AnimatedIcon delay={0}>
+                <Image src="/mysite/img/socials/telegram.svg" alt="TG" width={20} height={20} className="invert-0 animate-neon-pulse" />
+              </AnimatedIcon>
               {t.footer.tgButton}
             </a>
             
@@ -40,7 +43,9 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="flex w-full items-center justify-center gap-3 rounded-[5px] border border-card-border bg-card-bg py-[24px] text-[12px] font-bold uppercase transition-all hover:border-accent hover:shadow-lg dark:text-white text-black sm:w-[280px]"
             >
-              <Image src="/mysite/img/socials/github.svg" alt="GH" width={20} height={20} className="dark:invert-0 invert" />
+              <AnimatedIcon delay={0.3}>
+                <Image src="/mysite/img/socials/github.svg" alt="GH" width={20} height={20} className="dark:invert-0 invert animate-neon-pulse" />
+              </AnimatedIcon>
               GitHub
             </a>
           </div>
