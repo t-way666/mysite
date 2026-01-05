@@ -30,7 +30,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="btn-primary flex w-full items-center justify-center gap-3 !px-0 sm:w-[280px]"
             >
-              <Image src="/img/socials/telegram.svg" alt="TG" width={20} height={20} className="invert-0" />
+              <Image src="/mysite/img/socials/telegram.svg" alt="TG" width={20} height={20} className="invert-0" />
               {t.footer.tgButton}
             </a>
             
@@ -40,7 +40,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="flex w-full items-center justify-center gap-3 rounded-[5px] border border-card-border bg-card-bg py-[24px] text-[12px] font-bold uppercase transition-all hover:border-accent hover:shadow-lg dark:text-white text-black sm:w-[280px]"
             >
-              <Image src="/img/socials/github.svg" alt="GH" width={20} height={20} className="dark:invert-0 invert" />
+              <Image src="/mysite/img/socials/github.svg" alt="GH" width={20} height={20} className="dark:invert-0 invert" />
               GitHub
             </a>
           </div>

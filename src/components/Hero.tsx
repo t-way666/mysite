@@ -7,8 +7,8 @@ import { ThemeToggle } from './ThemeToggle';
 import { LanguageToggle } from './LanguageToggle';
 
 const socialLinks = [
-  { href: "https://github.com/t-way666", src: "/img/socials/github.svg", alt: "GitHub" },
-  { href: "https://t.me/T_w_a_y", src: "/img/socials/telegram.svg", alt: "Telegram" },
+  { href: "https://github.com/t-way666", src: "/mysite/img/socials/github.svg", alt: "GitHub" },
+  { href: "https://t.me/T_w_a_y", src: "/mysite/img/socials/telegram.svg", alt: "Telegram" },
 ];
 
 export default function Hero() {
@@ -75,7 +75,7 @@ export default function Hero() {
              {/* Контейнер картинки: плотно прилегает, без отступов */}
              <div className="relative h-full w-full overflow-hidden rounded-full bg-black">
                 <Image 
-                    src="/img/avatar.jpg" 
+                    src="/mysite/img/avatar.jpg" 
                     alt="Ибодулло Исматов" 
                     fill
                     className="object-cover object-top"

@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const projectImages = [
-  "/img/project-img.png"
+  "/mysite/img/project-img.png"
 ];
 
 export default function Projects() {
@@ -51,7 +51,7 @@ export default function Projects() {
                   
                   <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
                     <div className="flex items-start gap-4">
-                      <Image src="/img/project/time-icon.svg" alt="Time" width={24} height={24} className="dark:invert-0 invert icon-neon-hover" />
+                      <Image src="/mysite/img/project/time-icon.svg" alt="Time" width={24} height={24} className="dark:invert-0 invert icon-neon-hover" />
                       <div>
                         <h4 className="mb-2 text-lg font-bold leading-none">{t.projects.labels.time}</h4>
                         <p className="text-base leading-relaxed opacity-80">{project.time}</p>
@@ -59,7 +59,7 @@ export default function Projects() {
                     </div>
                     
                     <div className="flex items-start gap-4">
-                      <Image src="/img/project/cost-icon.svg" alt="Cost" width={24} height={24} className="dark:invert-0 invert icon-neon-hover" />
+                      <Image src="/mysite/img/project/cost-icon.svg" alt="Cost" width={24} height={24} className="dark:invert-0 invert icon-neon-hover" />
                       <div>
                         <h4 className="mb-2 text-lg font-bold leading-none">{t.projects.labels.cost}</h4>
                         <p className="text-base leading-relaxed opacity-80">{project.cost}</p>
@@ -68,7 +68,7 @@ export default function Projects() {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <Image src="/img/project/feedback-icon.svg" alt="Feedback" width={24} height={24} className="dark:invert-0 invert icon-neon-hover" />
+                    <Image src="/mysite/img/project/feedback-icon.svg" alt="Feedback" width={24} height={24} className="dark:invert-0 invert icon-neon-hover" />
                     <div>
                       <h4 className="mb-2 text-lg font-bold leading-none">{t.projects.labels.feedback}</h4>
                       <p className="text-base leading-relaxed opacity-80 italic">&ldquo;{project.feedback}&rdquo;</p>

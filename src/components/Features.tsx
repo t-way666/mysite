@@ -5,12 +5,12 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
 
 const icons = [
-  "/img/features/offer-img.svg",
-  "/img/features/deadline-img.svg",
-  "/img/features/agreement-img.svg",
-  "/img/features/steps-img.svg",
-  "/img/features/storage-img.svg",
-  "/img/features/conversation-img.svg"
+  "/mysite/img/features/offer-img.svg",
+  "/mysite/img/features/deadline-img.svg",
+  "/mysite/img/features/agreement-img.svg",
+  "/mysite/img/features/steps-img.svg",
+  "/mysite/img/features/storage-img.svg",
+  "/mysite/img/features/conversation-img.svg"
 ];
 
 const containerVariants = {
