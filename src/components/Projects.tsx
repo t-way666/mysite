@@ -20,7 +20,7 @@ export default function Projects() {
   return (
     <section className="py-16 md:py-[92px] transition-colors duration-300">
       <div className="container mx-auto max-w-[945px] px-4">
-        <h2 className="mb-14 text-3xl font-bold md:mb-[84px] md:text-4xl">
+        <h2 className="mb-14 text-3xl font-bold md:mb-[84px] md:text-4xl text-center">
           {t.projects.title}
         </h2>
 
