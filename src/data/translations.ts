@@ -40,14 +40,22 @@ export const translations = {
       labels: {
         time: "Срок",
         cost: "Стоимость",
-        feedback: "Отзыв клиента"
+        feedback: "Отзыв / Результат"
       },
       items: [
         {
           title: "Сайт строительной фирмы “Велстрой”",
           time: "4 рабочих дня",
           cost: "14 000 ₽",
-          feedback: "Мне понравилось работать с Ибодулло, потому что он все время был на связи и предлагал свои решения, когда мы заходили в тупик с дизайном. Мне нужны были закрывающие документы для бухгалтерии, и он — тот редкий фрилансер, у которого с документами все в порядке"
+          feedback: "Мне понравилось работать с Ибодулло, потому что он все время был на связи и предлагал свои решения, когда мы заходили в тупик с дизайном. Мне нужны были закрывающие документы для бухгалтерии, и он — тот редкий фрилансер, у которого с документами все в порядке",
+          link: null
+        },
+        {
+          title: "MLBB Helper — Помощник для игроков",
+          time: "Пет-проект",
+          cost: "Бесплатно",
+          feedback: "Веб-приложение для расчета урона и анализа винрейта в Mobile Legends. Позволяет игрокам точно планировать свои сборки и следить за прогрессом ранга.",
+          link: "https://mlbb-helper.vercel.app/"
         }
       ]
     },
@@ -99,14 +107,22 @@ export const translations = {
       labels: {
         time: "Timeline",
         cost: "Cost",
-        feedback: "Client Feedback"
+        feedback: "Feedback / Result"
       },
       items: [
         {
           title: "Construction company website 'Velstroy'",
           time: "4 working days",
           cost: "$200",
-          feedback: "I liked working with Ibodullo because he was always in touch and offered his solutions when we reached a dead end with the design. I needed closing documents for accounting, and he is that rare freelancer who has everything in order with documents."
+          feedback: "I liked working with Ibodullo because he was always in touch and offered his solutions when we reached a dead end with the design. I needed closing documents for accounting, and he is that rare freelancer who has everything in order with documents.",
+          link: null
+        },
+        {
+          title: "MLBB Helper App",
+          time: "Pet Project",
+          cost: "Free",
+          feedback: "A web application for damage calculation and winrate analysis in Mobile Legends. Allows players to accurately plan their builds and track rank progress.",
+          link: "https://mlbb-helper.vercel.app/"
         }
       ]
     },
