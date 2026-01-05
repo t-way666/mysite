@@ -59,7 +59,7 @@ export default function Features() {
                   alt={feature.title} 
                   width={48} 
                   height={48} 
-                  className="h-12 w-12 animate-neon-pulse"
+                  className="h-12 w-12 dark:invert-0 invert animate-neon-pulse"
                 />
               </AnimatedIcon>
               <h3 className="mb-4 text-2xl font-bold leading-7">

@@ -7,11 +7,6 @@ import { ThemeToggle } from './ThemeToggle';
 import { LanguageToggle } from './LanguageToggle';
 import AnimatedIcon from './AnimatedIcon';
 
-const socialLinks = [
-  { href: "https://github.com/t-way666", src: "/mysite/img/socials/github.svg", alt: "GitHub" },
-  { href: "https://t.me/T_w_a_y", src: "/mysite/img/socials/telegram.svg", alt: "Telegram" },
-];
-
 export default function Hero() {
   const { t } = useLanguage();
 
@@ -20,17 +15,6 @@ export default function Hero() {
       <div className="container mx-auto max-w-[945px] px-4">
         {/* Header Top */}
         <div className="mb-[105px] flex items-center justify-between gap-6">
-          {/* Соцсети: скрыты на мобилках, видны на md и выше */}
-          <div className="hidden items-center gap-5 md:flex">
-            {socialLinks.map((link, idx) => (
-              <a key={idx} href={link.href} className="transition-opacity hover:opacity-100" target="_blank" rel="noopener noreferrer">
-                <AnimatedIcon delay={idx * 0.3}>
-                  <Image src={link.src} alt={link.alt} width={17} height={16} className="h-4 w-[17px] dark:brightness-100 brightness-0 animate-neon-pulse" />
-                </AnimatedIcon>
-              </a>
-            ))}
-          </div>
-          
           {/* Переключатели: всегда видны, на мобилках прижаты к правому краю через justify-end в родителе */}
           <div className="ml-auto flex items-center gap-4">
              <LanguageToggle />
