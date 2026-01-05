@@ -144,6 +144,67 @@ body {
   line-height: 28px;
 }
 
+/* --------------projects---------------- */
+
+.projects {
+  background: linear-gradient(180.00deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 100%);
+}
+
+.projects-slide {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+}
+
+.project-text {
+  flex-basis: 60%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-title {
+  flex-basis: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 100%;
+  margin: 0;
+  margin-bottom: 41px;
+}
+
+.project-time,
+.project-cost {
+  flex-basis: 50%;
+}
+
+.project-time,
+.project-cost,
+.project-feedback {
+  display: flex;
+  align-items: flex-start;
+}
+
+.project-subtitle {
+  margin: 0;
+  margin-bottom: 7px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.project-paragraph {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.project-icon {
+  margin-right: 16px;
+}
+
+
 /* -----------------contacts-----------*/
 .contacts-form {
   border-radius: 5px;
@@ -252,33 +313,4 @@ body {
   text-align: left;
   text-decoration-line: underline;
   margin-top: 72px;
-}
-
-/* Тут уже я обратился к нейронке чтобы сделать переходный градиентный фон */
-footer.section {
-  position: relative;
-}
-
-footer.section::before {
-  content: "";
-  position: absolute;
-  top: -260px;
-  left: 0;
-  right: 0;
-  height: 260px;
-  pointer-events: none;
-  z-index: 1;
-  /* длинный мягкий градиент: от полностью прозрачного к цвету футера (#20202d) */
-  background: linear-gradient(180deg,
-    rgba(32,32,45,0) 0%,
-    rgba(32,32,45,0.25) 40%,
-    rgba(32,32,45,0.6) 75%,
-    rgba(32,32,45,1) 100%
-  );
-}
-
-/* Поднять содержимое футера выше псевдо-элемента */
-footer.section > .container {
-  position: relative;
-  z-index: 2;
 }

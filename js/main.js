@@ -1,1 +1,1 @@
-new WOW().init();ё
+new WOW().init();
