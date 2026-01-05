@@ -44,7 +44,7 @@ export default function Footer() {
               className="flex w-full items-center justify-center gap-3 rounded-[5px] border border-card-border bg-card-bg py-[24px] text-[12px] font-bold uppercase transition-all hover:border-accent hover:shadow-lg dark:text-white text-black sm:w-[280px]"
             >
               <AnimatedIcon delay={0.3}>
-                <Image src="/mysite/img/socials/github.svg" alt="GH" width={20} height={20} className="dark:invert-0 invert animate-neon-pulse" />
+                <Image src="/mysite/img/socials/github.svg" alt="GH" width={20} height={20} className="dark:brightness-100 brightness-0 animate-neon-pulse" />
               </AnimatedIcon>
               GitHub
             </a>

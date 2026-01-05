@@ -25,7 +25,7 @@ export default function Hero() {
             {socialLinks.map((link, idx) => (
               <a key={idx} href={link.href} className="transition-opacity hover:opacity-100" target="_blank" rel="noopener noreferrer">
                 <AnimatedIcon delay={idx * 0.3}>
-                  <Image src={link.src} alt={link.alt} width={17} height={16} className="h-4 w-[17px] dark:invert-0 invert animate-neon-pulse" />
+                  <Image src={link.src} alt={link.alt} width={17} height={16} className="h-4 w-[17px] dark:brightness-100 brightness-0 animate-neon-pulse" />
                 </AnimatedIcon>
               </a>
             ))}
