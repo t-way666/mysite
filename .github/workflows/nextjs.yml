@@ -55,13 +55,6 @@ jobs:
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
-          # Automatically inject basePath in your Next.js config file, and disable
-          # server side image optimization (further components/image optimization).
-          #
-          # You can restore this SHARED optimization by leaving out the `static_export` option
-          # or by setting it to `false`.
-          static_export: true
       - name: Restore cache
         uses: actions/cache@v4
         with:
