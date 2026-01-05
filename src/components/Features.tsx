@@ -38,7 +38,7 @@ export default function Features() {
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="mb-14 text-3xl font-bold md:mb-[84px] md:text-4xl"
+          className="mb-14 text-3xl font-bold md:mb-[84px] md:text-4xl text-center"
         >
           {t.features.title}
         </motion.h2>
