@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Light Theme - Clean Minimalist + Volume */
+  --background: #f1f5f9; /* Slate-100: Чуть серее для контраста с белыми блоками */
+  --foreground: #334155; /* Slate-700 */
+  --accent: #2563eb;
+  --accent-dark: #1d4ed8;
+  --card-bg: #ffffff; /* Чистый белый для четкого выделения (30% по правилу) */
+  --input-bg: #f8fafc;
+  --grid-color: rgba(71, 85, 105, 0.08); /* Более заметная сетка */
+  --grid-sub-color: rgba(71, 85, 105, 0.04);
+
+  /* Neon Colors for Light Theme */
+  --neon-1: #2563eb; 
+  --neon-2: #0ea5e9; 
+  --neon-3: #6366f1;
+}
+
+.dark {
+  /* Dark Theme */
+  --background: #020617; /* Slate-950: Глубокий темный */
+  --foreground: #f8fafc;
+  --accent: #FFBB01;
+  --accent-dark: #b68500;
+  --card-bg: rgba(30, 41, 59, 0.4); /* Полупрозрачный Slate-800 */
+  --input-bg: #1e293b;
+  --grid-color: rgba(255, 255, 255, 0.05);
+  --grid-sub-color: transparent;
+
+  /* Neon Colors for Dark Theme */
+  --neon-1: #FFBB01;
+  --neon-2: #2563eb;
+  --neon-3: #dc2626;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-dark: var(--accent-dark);
+  --color-card-bg: var(--card-bg);
+  --color-input-bg: var(--input-bg);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-roboto), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  background-image: 
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(var(--grid-sub-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-sub-color) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-attachment: fixed;
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-2xl p-8 transition-all duration-300;
+    
+    /* Светлая тема: Объемные белые карточки */
+    background: var(--card-bg);
+    border: 1px solid rgba(203, 213, 225, 0.6); /* Slate-300: Четкая граница */
+    
+    box-shadow: 
+      0 4px 6px -1px rgba(0, 0, 0, 0.05),    /* Мягкая тень вниз */
+      0 2px 4px -1px rgba(0, 0, 0, 0.03),
+      0 0 0 1px rgba(0, 0, 0, 0.02);         /* Микро-обводка для резкости */
+  }
+
+  .dark .glass-card {
+    @apply backdrop-blur-md;
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Глубокая тень для темной */
+  }
+
+  /* Hover эффект */
+  @media (hover: hover) {
+    .glass-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent); /* Синяя обводка при наведении */
+      box-shadow: 
+        0 20px 25px -5px rgba(0, 0, 0, 0.08), 
+        0 10px 10px -5px rgba(0, 0, 0, 0.03);
+    }
+    .dark .glass-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 10px 40px -10px rgba(255, 187, 1, 0.15);
+    }
+  }
+
+  .btn-primary {
+    @apply relative rounded-[5px_5px_10px_10px] bg-linear-to-b from-blue-500 to-blue-700 px-[42px] py-[24px] text-[12px] font-bold uppercase leading-[14px] text-white cursor-pointer transition-all duration-300;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3), 0 2px 4px -1px rgba(37, 99, 235, 0.2);
+  }
+
+  .dark .btn-primary {
+    @apply from-[#fcd976] to-accent text-black;
+    box-shadow: 0 0 15px rgba(255, 187, 1, 0.3), 0 4px 0 0 var(--accent-dark);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4), 0 4px 6px -2px rgba(37, 99, 235, 0.2);
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+  }
+  
+  .dark .btn-primary:hover {
+    box-shadow: 0 0 25px var(--accent), 0 10px 20px rgba(255, 187, 1, 0.3), 0 4px 0 0 var(--accent-dark);
+  }
+
+  .icon-neon-hover {
+    @apply transition-all duration-300;
+  }
+  .icon-neon-hover:hover {
+    filter: drop-shadow(0 0 8px var(--accent));
+    transform: scale(1.1);
+  }
+}
+
+/* Swiper */
+.projects-swiper .swiper-button-next,
+.projects-swiper .swiper-button-prev {
+  color: var(--accent);
+}
+.projects-swiper .swiper-pagination-bullet-active {
+  background: var(--accent);
+}
+
+/* Neon Avatar Animation */
+@keyframes neon-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.neon-avatar-wrapper {
+  @apply relative flex items-center justify-center rounded-full z-10;
+}
+
+.neon-avatar-wrapper::before {
+  content: "";
+  @apply absolute rounded-full;
+  inset: -35px;
+  background: conic-gradient(from 0deg, var(--neon-1), var(--neon-2), var(--neon-3), var(--neon-1));
+  filter: blur(35px);
+  animation: neon-spin 4s linear infinite;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.neon-avatar-wrapper::after {
+  content: "";
+  @apply absolute rounded-full;
+  inset: -12px;
+  background: conic-gradient(from 0deg, var(--neon-1), var(--neon-2), var(--neon-3), var(--neon-1));
+  filter: blur(12px);
+  animation: neon-spin 4s linear infinite;
+  z-index: -1;
+  opacity: 1;
+}
