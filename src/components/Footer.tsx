@@ -32,7 +32,7 @@ export default function Footer() {
               className="btn-primary flex w-full items-center justify-center gap-3 !px-0 sm:w-[280px]"
             >
               <AnimatedIcon delay={0}>
-                <Image src="/mysite/img/socials/telegram.svg" alt="TG" width={20} height={20} className="invert-0 animate-neon-pulse" />
+                <Image src="/mysite/img/socials/telegram.svg" alt="TG" width={20} height={20} className="dark:invert-0 invert animate-neon-pulse" />
               </AnimatedIcon>
               {t.footer.tgButton}
             </a>
