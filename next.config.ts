@@ -8,10 +8,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  experimental: {
-    // @ts-expect-error reactCompiler is valid but missing from types
-    reactCompiler: true,
-  },
 };
 
 export default nextConfig;

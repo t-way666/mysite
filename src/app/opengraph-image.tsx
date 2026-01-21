@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
  
-export const runtime = 'edge';
+
  
 // Image metadata
 export const alt = 'Ibodullo Ismatov - Frontend Developer';
@@ -8,9 +8,10 @@ export const size = {
   width: 1200,
   height: 630,
 };
- 
+
 export const contentType = 'image/png';
- 
+export const dynamic = 'force-static';
+
 export default async function Image() {
   return new ImageResponse(
     (
@@ -77,7 +78,7 @@ export default async function Image() {
             color: '#475569',
             fontFamily: 'sans-serif',
         }}>
-            mysite.vercel.app
+            t-way666.github.io/mysite
         </div>
       </div>
     ),
