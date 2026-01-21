@@ -78,7 +78,7 @@ export default function Projects() {
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="opacity-70 hover:opacity-100 transition-opacity">
-                         <Image src="/globe.svg" alt="Link" width={20} height={20} className="dark:invert invert-0" />
+                         <Image src="/mysite/globe.svg" alt="Link" width={20} height={20} className="dark:invert invert-0" />
                       </a>
                     )}
                   </div>
