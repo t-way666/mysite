@@ -62,7 +62,7 @@ export default function Hero() {
              {/* Контейнер картинки: плотно прилегает, без отступов */}
              <div className="relative h-full w-full overflow-hidden rounded-full bg-black">
                 <Image 
-                    src="/img/avatar.jpg" 
+                    src="/mysite/img/avatar.jpg" 
                     alt="Ибодулло Исматов" 
                     fill
                     className="object-cover object-top"

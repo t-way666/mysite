@@ -32,7 +32,7 @@ export default function Footer() {
               className="flex w-full items-center justify-center gap-3 rounded-[5px] border border-transparent bg-slate-900 text-white py-[24px] text-[12px] font-bold uppercase transition-all hover:shadow-lg dark:border-card-border dark:bg-card-bg sm:w-[280px]"
             >
               <AnimatedIcon delay={0}>
-                <Image src="/img/socials/telegram.svg" alt="TG" width={20} height={20} className="brightness-100 animate-neon-pulse" />
+                <Image src="/mysite/img/socials/telegram.svg" alt="TG" width={20} height={20} className="brightness-100 animate-neon-pulse" />
               </AnimatedIcon>
               {t.footer.tgButton}
             </a>
@@ -44,7 +44,7 @@ export default function Footer() {
               className="flex w-full items-center justify-center gap-3 rounded-[5px] border border-transparent bg-slate-900 text-white py-[24px] text-[12px] font-bold uppercase transition-all hover:shadow-lg dark:border-card-border dark:bg-card-bg sm:w-[280px]"
             >
               <AnimatedIcon delay={0.3}>
-                <Image src="/img/socials/github.svg" alt="GH" width={20} height={20} className="brightness-100 animate-neon-pulse" />
+                <Image src="/mysite/img/socials/github.svg" alt="GH" width={20} height={20} className="brightness-100 animate-neon-pulse" />
               </AnimatedIcon>
               GitHub
             </a>

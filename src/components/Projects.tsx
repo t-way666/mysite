@@ -11,9 +11,9 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 const projectImages = [
-  "/img/taxpal.png",
-  "/img/mlbbhelper.png",
-  "/img/daler-tourism.jpg"
+  "/mysite/img/taxpal.png",
+  "/mysite/img/mlbbhelper.png",
+  "/mysite/img/daler-tourism.jpg"
 ];
 
 export default function Projects() {
@@ -86,7 +86,7 @@ export default function Projects() {
                   <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
                     <div className="flex items-start gap-4">
                       <AnimatedIcon delay={0}>
-                        <Image src="/img/project/time-icon.svg" alt="Time" width={24} height={24} className="dark:invert-0 invert animate-neon-pulse" />
+                        <Image src="/mysite/img/project/time-icon.svg" alt="Time" width={24} height={24} className="dark:invert-0 invert animate-neon-pulse" />
                       </AnimatedIcon>
                       <div>
                         <h4 className="mb-2 text-lg font-bold leading-none">{t.projects.labels.time}</h4>
@@ -96,7 +96,7 @@ export default function Projects() {
                     
                     <div className="flex items-start gap-4">
                       <AnimatedIcon delay={0.3}>
-                        <Image src="/img/project/cost-icon.svg" alt="Cost" width={24} height={24} className="dark:invert-0 invert animate-neon-pulse" />
+                        <Image src="/mysite/img/project/cost-icon.svg" alt="Cost" width={24} height={24} className="dark:invert-0 invert animate-neon-pulse" />
                       </AnimatedIcon>
                       <div>
                         <h4 className="mb-2 text-lg font-bold leading-none">{t.projects.labels.cost}</h4>
