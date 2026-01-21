@@ -51,18 +51,18 @@ export const translations = {
           link: "https://salient.tailwindui.com/"
         },
         {
-          title: "MLBB Helper — Помощник для игроков",
-          time: "Пет-проект",
-          cost: "Бесплатно",
-          feedback: "Веб-приложение для расчета урона и анализа винрейта в Mobile Legends. Позволяет игрокам точно планировать свои сборки и следить за прогрессом ранга.",
-          link: "https://mlbb-helper.vercel.app/"
-        },
-        {
           title: "Турагентство “Daler Tourism”",
           time: "3 рабочих дня",
           cost: "15 000 ₽", // $150 approx
           feedback: "Современный лендинг для туристического агента. Адаптивная верстка, галерея направлений и прямая интеграция с соцсетями для приема заявок.",
           link: "https://daler-tourism.vercel.app/"
+        },
+        {
+          title: "MLBB Helper — Помощник для игроков",
+          time: "Пет-проект",
+          cost: "Бесплатно",
+          feedback: "Веб-приложение для расчета урона и анализа винрейта в Mobile Legends. Позволяет игрокам точно планировать свои сборки и следить за прогрессом ранга.",
+          link: "https://mlbb-helper.vercel.app/"
         }
       ]
     },
@@ -125,18 +125,18 @@ export const translations = {
           link: "https://salient.tailwindui.com/"
         },
         {
-          title: "MLBB Helper App",
-          time: "Pet Project",
-          cost: "Free",
-          feedback: "A web application for damage calculation and winrate analysis in Mobile Legends. Allows players to accurately plan their builds and track rank progress.",
-          link: "https://mlbb-helper.vercel.app/"
-        },
-        {
           title: "Travel Agency 'Daler Tourism'",
           time: "3 working days",
           cost: "$150",
           feedback: "A modern landing page for a travel agent. Features a responsive design, destination gallery, and direct integration with social networks for receiving applications.",
           link: "https://daler-tourism.vercel.app/"
+        },
+        {
+          title: "MLBB Helper App",
+          time: "Pet Project",
+          cost: "Free",
+          feedback: "A web application for damage calculation and winrate analysis in Mobile Legends. Allows players to accurately plan their builds and track rank progress.",
+          link: "https://mlbb-helper.vercel.app/"
         }
       ]
     },
@@ -199,18 +199,18 @@ export const translations = {
           link: "https://salient.tailwindui.com/"
         },
         {
-          title: "MLBB Helper — O'yinchilar yordamchisi",
-          time: "Pet-loyiha",
-          cost: "Bepul",
-          feedback: "Mobile Legends-da yutqazish ehtimolini tahlil qilish va zararni hisoblash uchun veb-ilova. O'yinchilarga o'z yig'imlarini aniq rejalashtirish va reyting o'sishini kuzatish imkonini beradi.",
-          link: "https://mlbb-helper.vercel.app/"
-        },
-        {
           title: "Sayohat agentligi “Daler Tourism”",
           time: "3 ish kuni",
           cost: "15 000 ₽", // $150 approx
           feedback: "Sayohat agenti uchun zamonaviy lending. Moslashuvchan dizayn, yo'nalishlar galereyasi va so'rovlarni qabul qilish uchun ijtimoiy tarmoqlar bilan to'g'ridan-to'g'ri integratsiya.",
           link: "https://daler-tourism.vercel.app/"
+        },
+        {
+          title: "MLBB Helper — O'yinchilar yordamchisi",
+          time: "Pet-loyiha",
+          cost: "Bepul",
+          feedback: "Mobile Legends-da yutqazish ehtimolini tahlil qilish va zararni hisoblash uchun veb-ilova. O'yinchilarga o'z yig'imlarini aniq rejalashtirish va reyting o'sishini kuzatish imkonini beradi.",
+          link: "https://mlbb-helper.vercel.app/"
         }
       ]
     },

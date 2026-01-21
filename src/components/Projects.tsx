@@ -12,8 +12,8 @@ import 'swiper/css/pagination';
 
 const projectImages = [
   "/mysite/img/taxpal.png",
-  "/mysite/img/mlbbhelper.png",
-  "/mysite/img/daler-tourism.jpg"
+  "/mysite/img/daler-tourism.jpg",
+  "/mysite/img/mlbbhelper.png"
 ];
 
 export default function Projects() {
