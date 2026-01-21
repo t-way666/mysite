@@ -194,14 +194,14 @@ export const translations = {
         {
           title: "SaaS lending 'TaxPal'",
           time: "7 ish kuni",
-          cost: "80 000 ₽",
+          cost: "10 000 000 so'm",
           feedback: "Bizning buxgalteriya dasturimiz uchun zamonaviy va toza lending kerak edi. Ibodullo silliq animatsiyalar va yuqori tezlikka ega Next.js versiyasini mukammal amalga oshirdi.",
           link: "https://salient.tailwindui.com/"
         },
         {
           title: "Sayohat agentligi “Daler Tourism”",
           time: "3 ish kuni",
-          cost: "15 000 ₽", // $150 approx
+          cost: "2 000 000 so'm",
           feedback: "Sayohat agenti uchun zamonaviy lending. Moslashuvchan dizayn, yo'nalishlar galereyasi va so'rovlarni qabul qilish uchun ijtimoiy tarmoqlar bilan to'g'ridan-to'g'ri integratsiya.",
           link: "https://daler-tourism.vercel.app/"
         },
