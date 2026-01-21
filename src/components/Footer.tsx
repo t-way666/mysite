@@ -29,10 +29,10 @@ export default function Footer() {
               href="https://t.me/T_w_a_y" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="btn-primary flex w-full items-center justify-center gap-3 !px-0 sm:w-[280px]"
+              className="flex w-full items-center justify-center gap-3 rounded-[5px] border border-transparent bg-slate-900 text-white py-[24px] text-[12px] font-bold uppercase transition-all hover:shadow-lg dark:border-card-border dark:bg-card-bg sm:w-[280px]"
             >
               <AnimatedIcon delay={0}>
-                <Image src="/mysite/img/socials/telegram.svg" alt="TG" width={20} height={20} className="dark:brightness-100 brightness-0 animate-neon-pulse" />
+                <Image src="/img/socials/telegram.svg" alt="TG" width={20} height={20} className="brightness-100 animate-neon-pulse" />
               </AnimatedIcon>
               {t.footer.tgButton}
             </a>
@@ -44,7 +44,7 @@ export default function Footer() {
               className="flex w-full items-center justify-center gap-3 rounded-[5px] border border-transparent bg-slate-900 text-white py-[24px] text-[12px] font-bold uppercase transition-all hover:shadow-lg dark:border-card-border dark:bg-card-bg sm:w-[280px]"
             >
               <AnimatedIcon delay={0.3}>
-                <Image src="/mysite/img/socials/github.svg" alt="GH" width={20} height={20} className="brightness-100 animate-neon-pulse" />
+                <Image src="/img/socials/github.svg" alt="GH" width={20} height={20} className="brightness-100 animate-neon-pulse" />
               </AnimatedIcon>
               GitHub
             </a>
@@ -55,9 +55,9 @@ export default function Footer() {
           <p className="text-sm">
             © {new Date().getFullYear()} {t.hero.title}.
           </p>
-          <a href="#" className="text-sm underline hover:opacity-100">
+          <span className="text-sm opacity-60">
             {t.footer.policy}
-          </a>
+          </span>
         </div>
       </div>
     </footer>

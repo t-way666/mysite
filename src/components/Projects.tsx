@@ -2,18 +2,18 @@
 
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import { useLanguage } from '@/context/LanguageContext';
 import AnimatedIcon from './AnimatedIcon';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const projectImages = [
-  "/mysite/img/project-img.png",
-  "/mysite/img/mlbbhelper.png"
+  "/img/taxpal.png",
+  "/img/mlbbhelper.png",
+  "/img/daler-tourism.jpg"
 ];
 
 export default function Projects() {
@@ -27,12 +27,21 @@ export default function Projects() {
         </h2>
 
         <Swiper
-          modules={[Navigation, Pagination]}
+          modules={[Autoplay, Pagination]}
           spaceBetween={50}
           slidesPerView={1}
-          navigation
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
           pagination={{ clickable: true }}
           className="projects-swiper !pb-12"
+          onSlideChange={(swiper) => {
+             // Change to 5s after first slide
+             if (swiper.params.autoplay && typeof swiper.params.autoplay === 'object') {
+               swiper.params.autoplay.delay = 5000;
+             }
+          }}
         >
           {t.projects.items.map((project, idx) => (
             <SwiperSlide key={idx} className="p-4">
@@ -45,10 +54,8 @@ export default function Projects() {
                     height={600}
                     className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
                   />
-                  {/* @ts-ignore */}
                   {project.link && (
                     <a 
-                      /* @ts-ignore */
                       href={project.link} 
                       target="_blank" 
                       rel="noopener noreferrer"
@@ -64,11 +71,14 @@ export default function Projects() {
                     <h3 className="text-2xl font-bold leading-none">
                       {project.title}
                     </h3>
-                    {/* @ts-ignore */}
+                    {/*  */}
                     {project.link && (
-                      /* @ts-ignore */
-                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity">
-                         <Image src="/mysite/globe.svg" alt="Link" width={20} height={20} className="dark:invert invert-0" />
+                      <a 
+                        href={project.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="opacity-70 hover:opacity-100 transition-opacity">
+                         <Image src="/globe.svg" alt="Link" width={20} height={20} className="dark:invert invert-0" />
                       </a>
                     )}
                   </div>
@@ -76,7 +86,7 @@ export default function Projects() {
                   <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
                     <div className="flex items-start gap-4">
                       <AnimatedIcon delay={0}>
-                        <Image src="/mysite/img/project/time-icon.svg" alt="Time" width={24} height={24} className="dark:invert-0 invert animate-neon-pulse" />
+                        <Image src="/img/project/time-icon.svg" alt="Time" width={24} height={24} className="dark:invert-0 invert animate-neon-pulse" />
                       </AnimatedIcon>
                       <div>
                         <h4 className="mb-2 text-lg font-bold leading-none">{t.projects.labels.time}</h4>
@@ -86,7 +96,7 @@ export default function Projects() {
                     
                     <div className="flex items-start gap-4">
                       <AnimatedIcon delay={0.3}>
-                        <Image src="/mysite/img/project/cost-icon.svg" alt="Cost" width={24} height={24} className="dark:invert-0 invert animate-neon-pulse" />
+                        <Image src="/img/project/cost-icon.svg" alt="Cost" width={24} height={24} className="dark:invert-0 invert animate-neon-pulse" />
                       </AnimatedIcon>
                       <div>
                         <h4 className="mb-2 text-lg font-bold leading-none">{t.projects.labels.cost}</h4>
@@ -96,9 +106,6 @@ export default function Projects() {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <AnimatedIcon delay={0.6}>
-                      <Image src="/mysite/img/project/feedback-icon.svg" alt="Feedback" width={24} height={24} className="dark:invert-0 invert animate-neon-pulse" />
-                    </AnimatedIcon>
                     <div>
                       <h4 className="mb-2 text-lg font-bold leading-none">{t.projects.labels.feedback}</h4>
                       <p className="text-base leading-relaxed opacity-80 italic">&ldquo;{project.feedback}&rdquo;</p>

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
 import { ThemeToggle } from './ThemeToggle';
 import { LanguageToggle } from './LanguageToggle';
-import AnimatedIcon from './AnimatedIcon';
+
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -62,7 +62,7 @@ export default function Hero() {
              {/* Контейнер картинки: плотно прилегает, без отступов */}
              <div className="relative h-full w-full overflow-hidden rounded-full bg-black">
                 <Image 
-                    src="/mysite/img/avatar.jpg" 
+                    src="/img/avatar.jpg" 
                     alt="Ибодулло Исматов" 
                     fill
                     className="object-cover object-top"

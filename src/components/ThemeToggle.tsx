@@ -22,14 +22,7 @@ export function ThemeToggle() {
     <div className="flex flex-col items-center justify-center">
       <motion.button
         onClick={() => setTheme(isDark ? 'light' : 'dark')}
-        animate={{
-          backgroundColor: isDark ? '#1e293b' : '#60a5fa', // Slate-800 vs Blue-400
-          borderColor: isDark ? '#334155' : '#93c5fd',
-          boxShadow: isDark 
-            ? '0 0 15px rgba(30, 41, 59, 0.5)' 
-            : '0 0 15px rgba(96, 165, 250, 0.5)'
-        }}
-        className="relative h-[40px] w-[80px] overflow-hidden rounded-full border-2 p-1 focus:outline-hidden cursor-pointer"
+        className="relative h-[40px] w-[80px] cursor-pointer rounded-full border-2 border-slate-300 bg-slate-100 p-1 transition-colors focus:outline-hidden dark:border-slate-700 dark:bg-slate-800"
         aria-label="Toggle theme"
         whileTap={{ scale: 0.95 }}
       >
@@ -84,7 +77,7 @@ export function ThemeToggle() {
             x: isDark ? 40 : 0,
             backgroundColor: isDark ? '#94a3b8' : '#ffffff',
           }}
-          className="relative z-10 h-[32px] w-[32px] rounded-full border-2 border-transparent shadow-lg"
+          className="relative z-10 h-[28px] w-[28px] rounded-full border-2 border-transparent shadow-lg"
         />
       </motion.button>
     </div>

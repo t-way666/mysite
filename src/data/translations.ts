@@ -44,11 +44,11 @@ export const translations = {
       },
       items: [
         {
-          title: "Сайт строительной фирмы “Велстрой”",
-          time: "4 рабочих дня",
-          cost: "14 000 ₽",
-          feedback: "Мне понравилось работать с Ибодулло, потому что он все время был на связи и предлагал свои решения, когда мы заходили в тупик с дизайном. Мне нужны были закрывающие документы для бухгалтерии, и он — тот редкий фрилансер, у которого с документами все в порядке",
-          link: null
+          title: "SaaS лендинг 'TaxPal'",
+          time: "7 рабочих дней",
+          cost: "80 000 ₽",
+          feedback: "Нам нужен был современный и чистый лендинг для нашего бухгалтерского ПО. Ибодулло реализовал пиксель-перфект верстку на Next.js с плавными анимациями и отличной скоростью загрузки.",
+          link: "https://salient.tailwindui.com/"
         },
         {
           title: "MLBB Helper — Помощник для игроков",
@@ -56,14 +56,21 @@ export const translations = {
           cost: "Бесплатно",
           feedback: "Веб-приложение для расчета урона и анализа винрейта в Mobile Legends. Позволяет игрокам точно планировать свои сборки и следить за прогрессом ранга.",
           link: "https://mlbb-helper.vercel.app/"
+        },
+        {
+          title: "Турагентство “Daler Tourism”",
+          time: "3 рабочих дня",
+          cost: "15 000 ₽", // $150 approx
+          feedback: "Современный лендинг для туристического агента. Адаптивная верстка, галерея направлений и прямая интеграция с соцсетями для приема заявок.",
+          link: "https://daler-tourism.vercel.app/"
         }
       ]
     },
     footer: {
       title: "Свяжитесь со мной",
       description: "Лучший способ связаться со мной — написать в Telegram. Обычно я отвечаю в течение часа.",
-      tgButton: "Написать в Telegram",
-      policy: "Политика конфиденциальности"
+      tgButton: "Telegram",
+      policy: "Все права защищены"
     }
   },
   en: {
@@ -111,11 +118,11 @@ export const translations = {
       },
       items: [
         {
-          title: "Construction company website 'Velstroy'",
-          time: "4 working days",
-          cost: "$200",
-          feedback: "I liked working with Ibodullo because he was always in touch and offered his solutions when we reached a dead end with the design. I needed closing documents for accounting, and he is that rare freelancer who has everything in order with documents.",
-          link: null
+          title: "SaaS Landing Page 'TaxPal'",
+          time: "7 working days",
+          cost: "$800",
+          feedback: "We needed a modern and clean landing page for our accounting software. Ibodullo delivered a pixel-perfect Next.js implementation with smooth animations and great performance.",
+          link: "https://salient.tailwindui.com/"
         },
         {
           title: "MLBB Helper App",
@@ -123,17 +130,98 @@ export const translations = {
           cost: "Free",
           feedback: "A web application for damage calculation and winrate analysis in Mobile Legends. Allows players to accurately plan their builds and track rank progress.",
           link: "https://mlbb-helper.vercel.app/"
+        },
+        {
+          title: "Travel Agency 'Daler Tourism'",
+          time: "3 working days",
+          cost: "$150",
+          feedback: "A modern landing page for a travel agent. Features a responsive design, destination gallery, and direct integration with social networks for receiving applications.",
+          link: "https://daler-tourism.vercel.app/"
         }
       ]
     },
     footer: {
       title: "Contact Me",
       description: "The best way to reach me is via Telegram. I usually reply within an hour.",
-      tgButton: "Message on Telegram",
-      policy: "Privacy Policy"
+      tgButton: "Telegram",
+      policy: "All rights reserved"
+    }
+  },
+  uz: {
+    hero: {
+      subtitle: "Frontend Dasturchi",
+      title: "Ibodullo Ismatov",
+      description: "Kichik va o'rta biznes uchun saytlar va veb-ilovalar yarataman. Dizayn, maket va frontend dasturlash bilan shug'ullanaman.",
+      button: "Bepul konsultatsiya"
+    },
+    features: {
+      title: "Men bilan ishlash qulay",
+      items: [
+        {
+          title: "Shartnoma asosida",
+          text: "Buxgalteriya uchun barcha hujjatlarni taqdim etaman: shartnomalar, hisob-fakturalar va aktlar. Yakka tartibdagi tadbirkor (YTT) sifatida ishlayman."
+        },
+        {
+          title: "O'z vaqtida",
+          text: "Loyihani topshirish muddati shartnomada ko'rsatilgan. Agar kechiksangiz — jarima to'layman."
+        },
+        {
+          title: "Moslashuvchan narx",
+          text: "Agar sizda nostandart loyiha bo'lsa, ish narxini hisoblab chiqaman va narx qanday shakllanishini tushuntirib beraman."
+        },
+        {
+          title: "Bosqichma-bosqich natijalar",
+          text: "Ishni so'nggi muddat oldidan emas, balki bosqichma-bosqich ko'rsatib boraman."
+        },
+        {
+          title: "Xosting va domen",
+          text: "Agar biz loyiha narxini kelishib olsak, unga hamma narsa kiradi: domen va bir yillik xosting + SSL sertifikati."
+        },
+        {
+          title: "Topshirgandan keyin yordam",
+          text: "Saytdan qanday foydalanishni sizga yoki xodimingizga o'rgataman va video ko'rsatmalar yozib beraman."
+        }
+      ]
+    },
+    projects: {
+      title: "So'nggi loyihalar",
+      labels: {
+        time: "Muddat",
+        cost: "Narx",
+        feedback: "Fikr / Natija"
+      },
+      items: [
+        {
+          title: "SaaS lending 'TaxPal'",
+          time: "7 ish kuni",
+          cost: "80 000 ₽",
+          feedback: "Bizning buxgalteriya dasturimiz uchun zamonaviy va toza lending kerak edi. Ibodullo silliq animatsiyalar va yuqori tezlikka ega Next.js versiyasini mukammal amalga oshirdi.",
+          link: "https://salient.tailwindui.com/"
+        },
+        {
+          title: "MLBB Helper — O'yinchilar yordamchisi",
+          time: "Pet-loyiha",
+          cost: "Bepul",
+          feedback: "Mobile Legends-da yutqazish ehtimolini tahlil qilish va zararni hisoblash uchun veb-ilova. O'yinchilarga o'z yig'imlarini aniq rejalashtirish va reyting o'sishini kuzatish imkonini beradi.",
+          link: "https://mlbb-helper.vercel.app/"
+        },
+        {
+          title: "Sayohat agentligi “Daler Tourism”",
+          time: "3 ish kuni",
+          cost: "15 000 ₽", // $150 approx
+          feedback: "Sayohat agenti uchun zamonaviy lending. Moslashuvchan dizayn, yo'nalishlar galereyasi va so'rovlarni qabul qilish uchun ijtimoiy tarmoqlar bilan to'g'ridan-to'g'ri integratsiya.",
+          link: "https://daler-tourism.vercel.app/"
+        }
+      ]
+    },
+    footer: {
+      title: "Men bilan bog'laning",
+      description: "Men bilan bog'lanishning eng yaxshi usuli — Telegram orqali yozish. Odatda bir soat ichida javob beraman.",
+      tgButton: "Telegram",
+      policy: "Barcha huquqlar himoyalangan"
     }
   }
 };
 
-export type Language = 'ru' | 'en';
+export type Language = 'ru' | 'en' | 'uz';
 export type Translation = typeof translations.ru;

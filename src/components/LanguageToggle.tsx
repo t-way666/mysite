@@ -13,33 +13,48 @@ export function LanguageToggle() {
   }, []);
 
   if (!mounted) {
-    return <div className="h-[40px] w-[80px] rounded-full bg-gray-200 dark:bg-gray-800" />;
+    return <div className="h-[40px] w-[120px] rounded-full bg-gray-200 dark:bg-gray-800" />;
   }
 
-  const isEn = language === 'en';
+  // Position calculation: 38px per slot approx
+  // Container: 120px. Padding 4px (p-1). Available: 112px.
+  // 112 / 3 = ~37.33px.
+  // We used explicit offsets before: 0, 38, 76.
+  // Let's keep those offsets for the ball.
+  const xPositions = {
+    ru: 0,
+    uz: 38,
+    en: 76
+  };
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <motion.button
-        onClick={() => setLanguage(isEn ? 'ru' : 'en')}
-        animate={{
-          backgroundColor: isEn ? '#2563eb' : '#dc2626', // Blue for EN, Red for RU
-          borderColor: isEn ? '#93c5fd' : '#fca5a5',
-          boxShadow: isEn 
-            ? '0 0 15px rgba(37, 99, 235, 0.5)' 
-            : '0 0 15px rgba(220, 38, 38, 0.5)'
-        }}
-        className="relative h-[40px] w-[80px] overflow-hidden rounded-full border-2 p-1 focus:outline-hidden cursor-pointer"
-        aria-label="Toggle language"
-        whileTap={{ scale: 0.95 }}
+      <div
+        className="relative h-[40px] w-[120px] rounded-full border-2 border-slate-300 bg-slate-100 p-1 transition-colors dark:border-slate-700 dark:bg-slate-800"
       >
-        {/* Labels */}
-        <div className="absolute inset-0 flex items-center justify-between px-3 text-[10px] font-bold text-white/50">
-          <span>RU</span>
-          <span>EN</span>
+        {/* Labels Background - Clickable Zones */}
+        <div className="absolute inset-0 flex items-center justify-between px-1 text-[10px] font-bold text-slate-400">
+          <button 
+            onClick={() => setLanguage('ru')}
+            className="flex h-full w-[38px] cursor-pointer items-center justify-center focus:outline-hidden hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+          >
+            RU
+          </button>
+          <button 
+            onClick={() => setLanguage('uz')}
+            className="flex h-full w-[38px] cursor-pointer items-center justify-center focus:outline-hidden hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+          >
+            UZ
+          </button>
+          <button 
+            onClick={() => setLanguage('en')}
+            className="flex h-full w-[38px] cursor-pointer items-center justify-center focus:outline-hidden hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+          >
+            EN
+          </button>
         </div>
 
-        {/* Rolling Ball with Active Label */}
+        {/* Rolling Ball with Active Label (Pointer Events None to let clicks pass through if needed, though usually it covers the active one anyway) */}
         <motion.div
           layout
           transition={{
@@ -48,9 +63,9 @@ export function LanguageToggle() {
             damping: 30
           }}
           animate={{
-            x: isEn ? 40 : 0,
+            x: xPositions[language] || 0,
           }}
-          className="relative z-10 flex h-[32px] w-[32px] items-center justify-center rounded-full bg-white shadow-lg"
+          className="pointer-events-none relative z-10 flex h-[28px] w-[28px] items-center justify-center rounded-full bg-white shadow-lg"
         >
           <AnimatePresence mode="wait">
              <motion.span
@@ -58,13 +73,13 @@ export function LanguageToggle() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
-                className="text-xs font-bold text-black"
+                className="text-[10px] font-bold text-black"
              >
                {language.toUpperCase()}
              </motion.span>
           </AnimatePresence>
         </motion.div>
-      </motion.button>
+      </div>
     </div>
   );
 }

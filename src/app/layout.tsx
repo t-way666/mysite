@@ -10,8 +10,17 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://t-way666.github.io/mysite/'),
   title: "Ибодулло Исматов - Фронтенд-разработчик",
   description: "Разрабатываю сайты и веб-приложения для малого и среднего бизнеса. Дизайн, верстка и фронтенд-разработка.",
+  openGraph: {
+    title: "Ибодулло Исматов - Фронтенд-разработчик",
+    description: "Разрабатываю сайты и веб-приложения для малого и среднего бизнеса.",
+    url: 'https://mysite.vercel.app',
+    siteName: 'Ibodullo Ismatov Portfolio',
+    locale: 'ru_RU',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
