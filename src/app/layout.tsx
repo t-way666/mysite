@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ибодулло Исматов - Фронтенд-разработчик",
     description: "Разрабатываю сайты и веб-приложения для малого и среднего бизнеса.",
-    url: 'https://mysite.vercel.app',
+    url: 'https://t-way666.github.io/mysite/',
     siteName: 'Ibodullo Ismatov Portfolio',
     locale: 'ru_RU',
     type: 'website',
